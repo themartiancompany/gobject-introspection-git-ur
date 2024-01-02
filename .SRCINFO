@@ -4,6 +4,12 @@ pkgbase = gobject-introspection-git
 	pkgrel = 1
 	url = https://wiki.gnome.org/Projects/GObjectIntrospection
 	arch = x86_64
+	arch = arm
+	arch = aarch64
+	arch = powerpc
+	arch = pentium4
+	arch = i686
+	arch = armv7h
 	license = LGPL
 	license = GPL
 	makedepends = cairo
@@ -34,4 +40,3 @@ pkgname = gobject-introspection-runtime-git
 	provides = gobject-introspection-runtime=1.64.0+75+g8b0a7f4c
 	provides = libgirepository-1.0.so
 	conflicts = gobject-introspection-runtime
-
