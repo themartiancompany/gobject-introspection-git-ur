@@ -69,10 +69,23 @@ _meson_options=(
 )
 
 build() {
-  arch-meson \
-    "${_pkgname}" \
-    build \
-    "${_meson_options[@]}"
+  local \
+    _cflags=()
+  _cflags=(
+    "-I$( \
+       dirname \
+         "$(cc \
+              -v 2>&1 |
+              grep \
+                "InstalledDir" | \
+                awk '{print $2}')")/include/glib-2.0"
+    "${CFLAGS}"
+  )
+  CFLAGS="${_cflags[*]}" \
+    arch-meson \
+      "${_pkgname}" \
+      build \
+      "${_meson_options[@]}"
   ninja \
     -C build
 }
