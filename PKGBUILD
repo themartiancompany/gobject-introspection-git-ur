@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
 # Contributor: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 # Contributor: Truocolo <truocolo@aol.com>
 
